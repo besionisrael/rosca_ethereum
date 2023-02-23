@@ -8,7 +8,7 @@ data = ctgan.load_demo()
 # Keep only the columns of interest
 columns = ['age', 'marital-status', 'relationship', 'capital-gain', 'capital-loss', 'hours-per-week']
 data = data[columns]
-data = data.sample(1000)
+data = data.sample(60)
 
 print(f"Perform social network analysis on the data")
 # Perform social network analysis on the data
