@@ -81,22 +81,6 @@ for edge in G.edges:
 print("*** Edges After Social Network Analysis ***")
 print(edges)
 
-################## Graphic Visualization of Connected Netwok
-#Matplotlib
-G = nx.Graph(edges)
-
-# Calculate the degree distribution
-degrees = dict(G.degree())
-degree_values = sorted(set(degrees.values()))
-histogram = [list(degrees.values()).count(i) / float(nx.number_of_nodes(G)) for i in degree_values]
-
-# Plot the degree distribution
-plt.bar(degree_values, histogram)
-plt.xlabel('Degree')
-plt.ylabel('Fraction of Nodes')
-plt.show()
-###### End Graphic Visualization MatplotLib
-
 # Test collateralization and remove users with insufficient collateralization
 currentRoundPot = 500
 for edge in edges:
