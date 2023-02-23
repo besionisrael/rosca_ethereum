@@ -9,8 +9,7 @@ import matplotlib.pyplot as plt
 def config_tx():
     # Define the account address and private key for sending transactions
     account = '0xa48223053AAAa4EEB0A8c436679658dD0E485548'
-    private_key = '8121bc775eec8ee8fd34a928912f74d76d5814f5bcf850aaf5b80285a3c38e3d'
-
+    
     return {
     'from':account,
     'nonce': w3.eth.getTransactionCount(account),
@@ -82,7 +81,7 @@ for edge in G.edges:
 print("*** Edges After Social Network Analysis ***")
 print(edges)
 
-############# Graphic
+################## Graphic Visualization of Connected Netwok
 #Matplotlib
 G = nx.Graph(edges)
 
@@ -96,8 +95,7 @@ plt.bar(degree_values, histogram)
 plt.xlabel('Degree')
 plt.ylabel('Fraction of Nodes')
 plt.show()
-input()
-sys.exit()
+###### End Graphic Visualization MatplotLib
 
 # Test collateralization and remove users with insufficient collateralization
 currentRoundPot = 500
